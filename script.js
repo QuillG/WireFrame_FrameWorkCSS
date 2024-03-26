@@ -1,5 +1,4 @@
 
-// Récupération du bouton d'ajout de photo
 if (document.getElementById('btn-picture') !== null)
 document.getElementById('btn-picture').addEventListener('click', function (event) {
     event.preventDefault();
@@ -24,19 +23,11 @@ document.getElementById('btn-picture').addEventListener('click', function (event
     });
 });
 
-// Récupération du bouton Suivant
 if (document.getElementById('btnNext') !== null)
 document.getElementById('btnNext').addEventListener('click', function (event) {
     event.preventDefault();
     window.location.href = 'createProfilePage2.html';
 });
-
-// Récupération des centres d'intérêt
-
-if (document.getElementById('interests') !== null)
-console.log("coucou");
-
-
 
 
 centreInteret = {
@@ -79,8 +70,6 @@ centreInteret = {
 }
 
 
-//creation de grid de 3 colonnes responsive entre mobile et pc, il faut en titre h2 music et des bouton avec les genre a línterieur, avec des bouton asser grand et des gap sur x et y grace au json centreInteret 
-
 for (let key in centreInteret) {
     let div = document.createElement('div');
     div.classList.add('grid', 'mb-4', 'col-12');
@@ -103,10 +92,8 @@ for (let key in centreInteret) {
 
 var buttons = document.getElementsByClassName('btn');
 
-// Iterate through each button and add an event listener
 for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function (event) {
-        // change the class of the button to btn-primary or btn-outline-primary
         if (this.classList.contains('btn-outline-primary')) {
             this.classList.replace('btn-outline-primary', 'btn-primary');
         } else {
@@ -114,5 +101,12 @@ for (var i = 0; i < buttons.length; i++) {
         }
     });
 }
+
+
+if (document.getElementById('btnFinished') !== null)
+document.getElementById('btnFinished').addEventListener('click', function (event) {
+    event.preventDefault();
+    window.location.href = 'ProfilePage.html';
+});
 
 
