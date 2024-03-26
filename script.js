@@ -1,52 +1,4 @@
 
-//json centre d'interet dqns le dossier src/data/centresInteret.json
-
-// Récupération des centres d'intérêt
-//creation de card boostrap avec un grid de 3 colonnes
-
-
-fetch('/centreInteret.json')
-    .then(response => response.json())
-    .then(data => {
-        var container = document.getElementById('interests');
-        data.forEach(function (interest) {
-            var card = document.createElement('div');
-            card.classList.add('card', 'mb-3');
-            var img = document.createElement('img');
-            img.src = interest.image;
-            img.classList.add('card-img-top');
-            var cardBody = document.createElement('div');
-            cardBody.classList.add('card-body');
-            var title = document.createElement('h5');
-            title.classList.add('card-title');
-            title.textContent = interest.title;
-            var text = document.createElement('p');
-            text.classList.add('card-text');
-            text.textContent = interest.description;
-            var btn = document.createElement('button');
-            btn.classList.add('btn', 'btn-primary');
-            btn.textContent = 'Choisir';
-            btn.addEventListener('click', function () {
-                var selected = document.getElementById('selected');
-                var selectedInterests = selected.value.split(',');
-                if (selectedInterests.indexOf(interest.title) === -1) {
-                    selectedInterests.push(interest.title);
-                    selected.value = selectedInterests.join(',');
-                }
-            });
-            cardBody.appendChild(title);
-            cardBody.appendChild(text);
-            cardBody.appendChild(btn);
-            card.appendChild(img);
-            card.appendChild(cardBody);
-            container.appendChild(card);
-        });
-    });
-
-
-// Récupération des centres d'intérêt et creation de cases 
-
-
 // Récupération du bouton d'ajout de photo
 if (document.getElementById('btn-picture') !== null)
 document.getElementById('btn-picture').addEventListener('click', function (event) {
@@ -83,5 +35,84 @@ document.getElementById('btnNext').addEventListener('click', function (event) {
 
 if (document.getElementById('interests') !== null)
 console.log("coucou");
+
+
+
+
+centreInteret = {
+    "Sport": [
+        "Football",
+        "Basketball",
+        "Baseball",
+        "Soccer",
+        "Hockey",
+        "Tennis",
+        "Golf",
+        "Swimming",
+        "Track",
+        "Volleyball"
+    ],
+    "Music": [
+        "Rock",
+        "Country",
+        "Rap",
+        "Classical",
+        "Jazz",
+        "Blues",
+        "Reggae",
+        "Pop",
+        "Techno",
+        "Metal"
+    ],
+    "Food": [
+        "Pizza",
+        "Hamburger",
+        "Hot Dog",
+        "Pasta",
+        "Salad",
+        "Steak",
+        "Chicken",
+        "Fish",
+        "Tacos",
+        "Sushi"
+    ]
+}
+
+
+//creation de grid de 3 colonnes responsive entre mobile et pc, il faut en titre h2 music et des bouton avec les genre a línterieur, avec des bouton asser grand et des gap sur x et y grace au json centreInteret 
+
+for (let key in centreInteret) {
+    let div = document.createElement('div');
+    div.classList.add('grid', 'mb-4', 'col-12');
+  
+    let h4 = document.createElement('h4');
+    h4.textContent = key;
+    div.appendChild(h4);
+  
+    for (let value of centreInteret[key]) {
+      let button = document.createElement('button');
+      button.classList.add('btn', 'btn-outline-primary', 'btn-block', 'mx-3', 'my-2', 'col-12','col-md-3', 'col-lg-2', 'col-xl-1');
+      button.textContent = value;
+      div.appendChild(button);
+    }
+    document.getElementById('interests').appendChild(div);
+  }
+  
+
+// Rend les bouton creer un profil actif si un centre d'interet est selectionné
+
+var buttons = document.getElementsByClassName('btn');
+
+// Iterate through each button and add an event listener
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function (event) {
+        // change the class of the button to btn-primary or btn-outline-primary
+        if (this.classList.contains('btn-outline-primary')) {
+            this.classList.replace('btn-outline-primary', 'btn-primary');
+        } else {
+            this.classList.replace('btn-primary', 'btn-outline-primary');
+        }
+    });
+}
 
 
