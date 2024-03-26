@@ -15,12 +15,24 @@
     transition: all 0.3s;
 }
 
-.scrollable {
-    overflow-y: auto; /* Activer le défilement vertical si nécessaire */
-    scrollbar-width: none; /* Cacher la barre de défilement pour les navigateurs qui le supportent */
-    -ms-overflow-style: none; /* Cacher la barre de défilement pour Internet Explorer */
-}
 
-.scrollable::-webkit-scrollbar {
-    display: none; /* Cacher la barre de défilement pour les navigateurs WebKit */
-}
+.profile-header {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .profile-picture {
+    text-align: center;
+  }
+  
+  .profile-info {
+    padding-top: 10px;
+  }
+  
+  .posts {
+    margin-top: 20px;
+  }
+  
+  .post {
+    padding: 5px;
+  }
