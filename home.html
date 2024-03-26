@@ -27,6 +27,10 @@
           color: white; /* Couleur de l'icône */
           font-size: 48px; /* Taille de l'icône */
         }
+        .card {
+            margin-bottom: 20px;
+            width: 450px;
+        }
         .post {
           border: 1px solid #ccc;
           margin-bottom: 20px;
@@ -38,10 +42,6 @@
         }
         .post-text {
           padding: 10px; /* Ajouter un rembourrage à la zone de texte */
-        }
-        .like-icon, .comment-icon {
-          color: #333;
-          margin-right: 5px;
         }
     </style>
 </head>
@@ -73,7 +73,7 @@
       <div class="container mt-4">
         <!-- Stories -->
         <div class="row mb-4 text-center">
-          <div class="col-4 col-sm-4 col-md-4">
+          <div class="col-4 col-sm-4 col-md-4 d-flex justify-content-center">
             <div class="story">
               <i class="bi bi-person-circle avatar-icon"></i>
             </div>
@@ -90,44 +90,60 @@
           </div>
         </div>
     
-        <!-- Posts -->
-          <div class="col-12">
-            <div class="post text-center">
-              <img src="img/sport.jpeg" class="img-fluid" alt="">
-              <p>Contenu du premier post</p>
-              <div>
-                <span class="like-icon">♥</span>
-                <span class="comment-icon">💬</span>
-              </div>
+        <!-- Posts -->  
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <img src="img/sport.jpeg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-text">Contenu du premier post</p>
+                            <div>
+                                <i class="bi bi-heart"></i>
+                                <i class="bi bi-chat-dots"></i>
+                                <i class="bi bi-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-    
-          <div class="col-12">
-            <div class="post text-center">
-              <img src="img/voiture.jpg" class="img-fluid" alt="">
-              <p>Contenu du deuxième post</p>
-              <div>
-                <span class="like-icon">♥</span>
-                <span class="comment-icon">💬</span>
-              </div>
+        
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <img src="img/voiture.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-text">Contenu du deuxième post</p>
+                            <div>
+                                <i class="bi bi-heart"></i>
+                                <i class="bi bi-chat-dots"></i>
+                                <i class="bi bi-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-    
-          <div class="col-12">
-            <div class="post text-center">
-              <img src="img/anime.jpg" class="img-fluid" alt="">
-              <p>Contenu du troisième post</p>
-              <div>
-                <span class="like-icon">♥</span>
-                <span class="comment-icon">💬</span>
-              </div>
+        
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4">
+                    <div class="card">
+                        <img src="img/anime.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-text">Contenu du troisième post</p>
+                            <div>
+                                <i class="bi bi-heart"></i>
+                                <i class="bi bi-chat-dots"></i>
+                                <i class="bi bi-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
 
         <nav class="navbar sticky-bottom bg-dark d-md-none">
         <div class="container-fluid">
-            <a id="link-home" class="nav-link active" href="#"><i class="bi bi-house-fill"></i></a>
+            <a id="link-home" class="nav-link active" href="#"><i class="bi bi-house-fill fs-1 text-white"></i></a>
             <a class="nav-link active" href="#"><i class="bi bi-search fs-1 text-white"></i></a>
             <a class="nav-link active" href="#"><i class="bi bi-person fs-1 text-white"></i></a>
         </div>
