@@ -1,0 +1,26 @@
+#btn-picture{
+    font-size: 60px;
+    color: #fff;
+    background-color: #8ec5ff;
+    border-radius: 5%;
+    border-color: #fff;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#btn-picture:hover{
+    background-color: #0056b3;
+    transition: all 0.3s;
+}
+
+.scrollable {
+    overflow-y: auto; /* Activer le défilement vertical si nécessaire */
+    scrollbar-width: none; /* Cacher la barre de défilement pour les navigateurs qui le supportent */
+    -ms-overflow-style: none; /* Cacher la barre de défilement pour Internet Explorer */
+}
+
+.scrollable::-webkit-scrollbar {
+    display: none; /* Cacher la barre de défilement pour les navigateurs WebKit */
+}

@@ -1,0 +1,38 @@
+{
+    "Sport": [
+        "Football",
+        "Basketball",
+        "Baseball",
+        "Soccer",
+        "Hockey",
+        "Tennis",
+        "Golf",
+        "Swimming",
+        "Track",
+        "Volleyball"
+    ],
+    "Music": [
+        "Rock",
+        "Country",
+        "Rap",
+        "Classical",
+        "Jazz",
+        "Blues",
+        "Reggae",
+        "Pop",
+        "Techno",
+        "Metal"
+    ],
+    "Food": [
+        "Pizza",
+        "Hamburger",
+        "Hot Dog",
+        "Pasta",
+        "Salad",
+        "Steak",
+        "Chicken",
+        "Fish",
+        "Tacos",
+        "Sushi"
+    ]
+}
